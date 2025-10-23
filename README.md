@@ -1,38 +1,7 @@
-# sv
+# Tap2 Assignment
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A responsive coffee shop ordering interface built with SvelteKit and TypeScript. Features a product catalog, shopping cart, and a shiny ass UI.
 
-## Creating a project
+If you're seeing this, and you're from Tap2, HIRE ME ALREADY 🥹
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+**Live Demo:** https://tap2.kashanahmad.me
