@@ -60,12 +60,14 @@ export function createCart(): Cart {
 			return items.reduce((total, item) => total + item.quantity, 0);
 		},
 		getTotalPrice() {
-			return items.reduce((total, item) => {
+			const total = items.reduce((total, item) => {
 				// Extract price from trail (e.g., "€3.5" -> 3.5)
 				const priceString = typeof item.product.trail === 'string' ? item.product.trail : '';
 				const price = parseFloat(priceString.replace('€', '')) || 0;
 				return total + price * item.quantity;
 			}, 0);
+
+			return Number(total.toFixed(2));
 		}
 	};
 }

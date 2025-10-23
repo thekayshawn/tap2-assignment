@@ -19,7 +19,7 @@
 		<Header />
 		<div class="flex flex-1 flex-col justify-between bg-card p-3">
 			<ul class="flex flex-wrap gap-3">
-				{#each products as product}
+				{#each products as product (product.id)}
 					<ProductCard as="li" {product}>
 						<CardAction
 							onclick={() => cart.addItem(product)}
@@ -48,7 +48,7 @@
 				</div>
 			{:else}
 				<ul class="flex flex-col gap-2.5 px-3">
-					{#each cart.items as item}
+					{#each cart.items as item (item.product.id)}
 						<CartItem product={item.product} quantity={item.quantity} />
 					{/each}
 				</ul>

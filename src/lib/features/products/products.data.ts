@@ -39,7 +39,7 @@ export const products: Product[] = [
 		className: 'bg-folder-secondary text-folder-secondary-foreground'
 	},
 	{
-		id: 'coffee',
+		id: 'chai',
 		type: 'group',
 		indicator: Coffee,
 		name: 'Tea, Chai & Infusion',
