@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+:root {
+	/* Sizes */
+	--radius: 1rem;
+
+	/* Colors */
+	--background: oklch(1 0 0);
+	--foreground: oklch(0 0 0);
+	--card: oklch(97.529% 0.00751 260.892);
+	--card-foreground: oklch(21.188% 0.00966 17.805);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0 0 0);
+	--primary: oklch(52.545% 0.23963 261.992);
+	--primary-foreground: oklch(97.529% 0.00751 260.892);
+	--primary-muted: oklch(92.221% 0.03445 261.996);
+	--primary-muted-foreground: oklch(52.545% 0.23963 261.992);
+	--secondary: oklch(97.529% 0.00751 260.892);
+	--secondary-foreground: oklch(21.188% 0.00966 17.805);
+	--destructive: oklch(65.44% 0.23167 26.46);
+	--destructive-foreground: oklch(97.529% 0.00751 260.892);
+	--folder-primary: oklch(51.826% 0.16446 273.574);
+	--folder-primary-foreground: oklch(1 0 0);
+	--folder-secondary: oklch(53.511% 0.0975 49.903);
+	--folder-secondary-foreground: oklch(1 0 0);
+	--folder-warning: oklch(64.643% 0.12287 99.839);
+	--folder-warning-foreground: oklch(1 0 0);
+	--folder-success: oklch(51.334% 0.13266 145.19);
+	--folder-success-foreground: oklch(1 0 0);
+	--folder-destructive: oklch(55.165% 0.1841 25.608);
+	--folder-destructive-foreground: oklch(1 0 0);
+}
