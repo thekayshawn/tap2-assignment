@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      tailwind-merge:
+        specifier: ^3.3.1
+        version: 3.3.1
       tailwind-variants:
         specifier: ^3.1.1
         version: 3.1.1(tailwind-merge@3.3.1)(tailwindcss@4.1.15)
@@ -2501,8 +2507,7 @@ snapshots:
       magic-string: 0.30.19
       zimmerframe: 1.1.4
 
-  tailwind-merge@3.3.1:
-    optional: true
+  tailwind-merge@3.3.1: {}
 
   tailwind-variants@3.1.1(tailwind-merge@3.3.1)(tailwindcss@4.1.15):
     dependencies:

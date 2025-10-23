@@ -2,7 +2,7 @@
 	import type { VariantProps } from 'tailwind-variants';
 	import { tv } from 'tailwind-variants';
 	import { buttonVariants } from './button.svelte';
-	import type { UiComponentProps } from '$lib/utils';
+	import { cn, type UiComponentProps } from '$lib/utils';
 
 	export const iconButtonVariants = tv({
 		extend: buttonVariants,
@@ -39,6 +39,6 @@
 	const variants = iconButtonVariants({ size, color, variant });
 </script>
 
-<svelte:element this={as} bind:this={ref} class={[variants, className]} {...props}>
+<svelte:element this={as} bind:this={ref} class={cn(variants, className)} {...props}>
 	{@render children?.()}
 </svelte:element>

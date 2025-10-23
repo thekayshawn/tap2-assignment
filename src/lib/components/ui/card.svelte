@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { Snippet } from 'svelte';
 	import { tv } from 'tailwind-variants';
-	import type { UiComponentProps } from '$lib/utils';
+	import { cn, type UiComponentProps } from '$lib/utils';
 
 	const cardVariants = tv({
 		base: 'aspect-square rounded-2xl flex flex-col p-2 md:p-3 overflow-hidden [&_svg]:size-5 bg-card text-card-foreground relative isolate',
@@ -50,7 +50,7 @@
 	this={as}
 	bind:this={ref}
 	{id}
-	class={[variants.base(), className]}
+	class={cn(variants.base(), className)}
 	aria-labelledby={titleId}
 	aria-describedby={descriptionId}
 	{...props}

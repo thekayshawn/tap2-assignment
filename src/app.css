@@ -58,5 +58,5 @@
 }
 
 @utility interactive {
-	@apply cursor-pointer outline-2 outline-transparent transition-all focus-visible:outline-2 focus-visible:outline-primary enabled:hover:opacity-80 disabled:pointer-events-none disabled:opacity-40;
+	@apply cursor-pointer outline-2 outline-transparent transition-all focus-visible:outline-2 focus-visible:outline-primary enabled:hover:opacity-70 disabled:pointer-events-none disabled:opacity-40;
 }

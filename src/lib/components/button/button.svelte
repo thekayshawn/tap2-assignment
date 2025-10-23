@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import type { UiComponentProps } from '$lib/utils';
+	import { cn, type UiComponentProps } from '$lib/utils';
 	import type { VariantProps } from 'tailwind-variants';
 	import { tv } from 'tailwind-variants';
 
@@ -36,7 +36,7 @@
 			{
 				color: 'default',
 				variant: 'ghost',
-				class: 'bg-transparent text-primary'
+				class: 'bg-transparent text-primary enabled:hover:bg-primary-muted'
 			},
 			// Secondary color variants
 			{
@@ -52,7 +52,7 @@
 			{
 				color: 'secondary',
 				variant: 'ghost',
-				class: 'bg-transparent text-secondary'
+				class: 'bg-transparent text-secondary enabled:hover:bg-secondary-muted'
 			},
 			// Destructive color variants
 			{
@@ -68,7 +68,7 @@
 			{
 				color: 'destructive',
 				variant: 'ghost',
-				class: 'bg-transparent text-destructive'
+				class: 'bg-transparent text-destructive enabled:hover:bg-destructive-muted'
 			}
 		],
 		defaultVariants: {
@@ -98,6 +98,6 @@
 	const variants = buttonVariants({ size, color, variant });
 </script>
 
-<svelte:element this={as} bind:this={ref} class={[variants, className]} {...props}>
+<svelte:element this={as} bind:this={ref} class={cn(variants, className)} {...props}>
 	{@render children?.()}
 </svelte:element>
