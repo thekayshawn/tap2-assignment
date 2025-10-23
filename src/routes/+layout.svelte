@@ -1,12 +1,12 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { createCartStore, setCartContext } from '$lib/features/cart/cart.store.svelte';
+	import { createCart, setCart } from '$lib/features/cart/cart.svelte';
 
 	let { children } = $props();
 
-	const cart = createCartStore();
-	setCartContext(cart);
+	const cart = createCart();
+	setCart(cart);
 </script>
 
 <svelte:head>

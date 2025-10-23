@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { ArrowRight, Bookmark, Pencil } from '$lib/components/icons';
 	import Button, { IconButton } from '$lib/components/ui/button';
-	import { getCartContext } from '../cart.store.svelte';
+	import { getCart } from '../cart.svelte';
 
-	const cart = getCartContext();
+	const cart = getCart();
 
 	const totalPrice = $derived(cart.getTotalPrice());
 	const totalItems = $derived(cart.getTotalItems());

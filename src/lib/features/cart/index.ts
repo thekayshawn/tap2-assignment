@@ -1,1 +1,1 @@
-export { createCartStore, setCartContext, getCartContext } from './cart.store.svelte';
+export { createCart, setCart, getCart } from './cart.svelte';

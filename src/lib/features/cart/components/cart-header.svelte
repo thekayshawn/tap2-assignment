@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { EllipsisVertical, X } from '$lib/components/icons';
 	import { IconButton } from '$lib/components/ui/button';
-	import { getCartContext } from '../cart.store.svelte';
+	import { getCart } from '../cart.svelte';
 
-	const cart = getCartContext();
+	const cart = getCart();
 
 	function handleClear() {
 		cart.clearCart();

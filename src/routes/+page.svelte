@@ -5,14 +5,13 @@
 	import { CardAction } from '$lib/components/ui/card';
 	import ProductCard from '$lib/features/products/components/product-card.svelte';
 	import { products } from '$lib/features/products/products.data';
-	import { getCartContext } from '$lib/features/cart/cart.store.svelte';
+	import { getCart } from '$lib/features/cart';
 	import { CartFooter, CartHeader, CartItem } from '$lib/features/cart/components';
 
-	const cart = getCartContext();
+	const cart = getCart();
 
-	function handleAdd(product: (typeof products)[0]) {
-		cart.addItem(product);
-	}
+	const totalItems = $derived(cart.getTotalItems());
+	const isEmpty = $derived(totalItems === 0);
 </script>
 
 <main class="grid min-h-svh md:grid-cols-[1fr_234px]">
@@ -23,15 +22,19 @@
 				{#each products as product}
 					<ProductCard as="li" {product}>
 						<CardAction
-							onclick={() => handleAdd(product)}
+							onclick={() => cart.addItem(product)}
 							aria-label={product.type === 'entity' ? 'Add to cart' : 'View details'}
 						/>
 					</ProductCard>
 				{/each}
 			</ul>
 			<footer class="flex gap-3 md:hidden">
-				<Button class="flex-1" size="lg" variant="muted"><Bookmark /> Save</Button>
-				<Button class="flex-1" size="lg"><ArrowUp /> Pay</Button>
+				<Button disabled={isEmpty} class="flex-1" size="lg" variant="muted">
+					<Bookmark /> Save
+				</Button>
+				<Button disabled={isEmpty} class="flex-1" size="lg">
+					<ArrowUp /> Pay
+				</Button>
 			</footer>
 		</div>
 	</section>

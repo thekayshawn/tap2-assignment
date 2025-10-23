@@ -6,7 +6,7 @@ export type CartItem = {
 	quantity: number;
 };
 
-export type CartStore = {
+export type Cart = {
 	items: CartItem[];
 	addItem: (product: Product) => void;
 	removeItem: (productId: string) => void;
@@ -14,24 +14,16 @@ export type CartStore = {
 	clearCart: () => void;
 	getTotalItems: () => number;
 	getTotalPrice: () => number;
-	isOpen: boolean;
-	toggleCart: () => void;
-	openCart: () => void;
-	closeCart: () => void;
 };
 
 const CART_CONTEXT_KEY = Symbol('cart');
 
-export function createCartStore(): CartStore {
+export function createCart(): Cart {
 	let items = $state<CartItem[]>([]);
-	let isOpen = $state(false);
 
 	return {
 		get items() {
 			return items;
-		},
-		get isOpen() {
-			return isOpen;
 		},
 		addItem(product: Product) {
 			// Only add entities to cart, not groups
@@ -74,23 +66,14 @@ export function createCartStore(): CartStore {
 				const price = parseFloat(priceString.replace('€', '')) || 0;
 				return total + price * item.quantity;
 			}, 0);
-		},
-		toggleCart() {
-			isOpen = !isOpen;
-		},
-		openCart() {
-			isOpen = true;
-		},
-		closeCart() {
-			isOpen = false;
 		}
 	};
 }
 
-export function setCartContext(cart: CartStore) {
+export function setCart(cart: Cart) {
 	setContext(CART_CONTEXT_KEY, cart);
 }
 
-export function getCartContext(): CartStore {
-	return getContext<CartStore>(CART_CONTEXT_KEY);
+export function getCart(): Cart {
+	return getContext<Cart>(CART_CONTEXT_KEY);
 }

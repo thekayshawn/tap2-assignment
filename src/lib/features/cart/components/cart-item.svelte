@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Product } from '$lib/features/products/products.data';
-	import { getCartContext } from '../cart.store.svelte';
+	import { getCart } from '../cart.svelte';
 
 	const {
 		product,
@@ -10,7 +10,7 @@
 		quantity: number;
 	} = $props();
 
-	const cart = getCartContext();
+	const cart = getCart();
 
 	function increment() {
 		cart.updateQuantity(product.id, quantity + 1);
