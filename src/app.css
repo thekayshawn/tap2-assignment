@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
 :root {
 	/* Sizes */
@@ -19,6 +20,7 @@
 	--secondary-foreground: oklch(21.188% 0.00966 17.805);
 	--destructive: oklch(65.44% 0.23167 26.46);
 	--destructive-foreground: oklch(97.529% 0.00751 260.892);
+	--border: oklch(92.3% 0.01392 258.449);
 	--folder-primary: oklch(51.826% 0.16446 273.574);
 	--folder-primary-foreground: oklch(1 0 0);
 	--folder-secondary: oklch(53.511% 0.0975 49.903);
