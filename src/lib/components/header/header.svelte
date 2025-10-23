@@ -2,7 +2,6 @@
 	import logo from '$lib/assets/logo.svg';
 	import Button, { IconButton } from '../ui/button';
 	import { AlignJustify, ArrowLeft, Search, SlidersHorizontal } from '../icons';
-	import Responsive from '../ui/responsive.svelte';
 </script>
 
 <header class="grid px-6 pt-[62px] pb-3 md:grid-cols-[10rem_1fr_10rem] md:items-center md:p-3">
@@ -24,20 +23,10 @@
 				<SlidersHorizontal />
 			</IconButton>
 		</div>
-		<div class="text-right">
-			<Responsive>
-				<IconButton color="secondary" variant="ghost" aria-label="View cart">
-					<AlignJustify />
-				</IconButton>
-				<!-- Different variant above md -->
-				{#snippet md()}
-					<IconButton color="secondary" variant="muted" aria-label="View cart">
-						<AlignJustify />
-					</IconButton>
-				{/snippet}
-				<!-- Hidden above lg -->
-				{#snippet lg()}{/snippet}
-			</Responsive>
+		<div class="text-right md:hidden">
+			<IconButton color="secondary" variant="ghost" aria-label="View cart">
+				<AlignJustify />
+			</IconButton>
 		</div>
 	</div>
 </header>

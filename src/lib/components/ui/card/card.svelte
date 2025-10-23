@@ -3,14 +3,14 @@
 	import { tv } from 'tailwind-variants';
 	import { cn, type UiComponentProps } from '$lib/utils';
 
-	const cardVariants = tv({
-		base: 'aspect-square rounded-2xl flex flex-col p-2 md:p-3 overflow-hidden [&_svg]:size-5 bg-card text-card-foreground relative isolate',
+	export const cardVariants = tv({
+		base: 'rounded-2xl flex p-3 [&_svg]:size-5 bg-card text-card-foreground relative isolate shrink-0 group z-0',
 		slots: {
 			content:
-				'flex-1 flex flex-col gap-1 justify-between md:flex-auto md:self-end md:flex-row md:justify-start md:items-center',
+				'flex-1 flex flex-col gap-2 justify-between md:flex-auto md:self-end md:flex-row md:justify-start md:items-center',
 			indicator: 'shrink-0',
-			header: 'flex items-center gap-1',
-			title: 'text-sm flex-1 font-medium',
+			header: 'flex items-center gap-1 flex-1 justify-between items-end md:items-center',
+			title: 'text-sm font-medium',
 			description: 'sr-only',
 			trail: 'text-xs font-semibold shrink-0'
 		}
@@ -34,6 +34,7 @@
 		description,
 		indicator,
 		trail,
+		children,
 		...props
 	}: CardProps = $props();
 
@@ -63,4 +64,5 @@
 			{@render trail?.({ class: variants.trail() })}
 		</header>
 	</div>
+	{@render children?.()}
 </svelte:element>
