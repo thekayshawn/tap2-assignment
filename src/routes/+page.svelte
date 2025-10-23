@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$lib/components/header';
+	import Header from '$lib/components/ui/header.svelte';
 	import { ArrowUp, Bookmark } from '$lib/components/icons';
 	import Button from '$lib/components/ui/button';
 	import { CardAction } from '$lib/components/ui/card';

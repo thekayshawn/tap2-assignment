@@ -16,7 +16,7 @@ export type Cart = {
 	getTotalPrice: () => number;
 };
 
-const CART_CONTEXT_KEY = Symbol('cart');
+const cartKey = Symbol('cart');
 
 export function createCart(): Cart {
 	let items = $state<CartItem[]>([]);
@@ -71,9 +71,9 @@ export function createCart(): Cart {
 }
 
 export function setCart(cart: Cart) {
-	setContext(CART_CONTEXT_KEY, cart);
+	setContext(cartKey, cart);
 }
 
 export function getCart(): Cart {
-	return getContext<Cart>(CART_CONTEXT_KEY);
+	return getContext<Cart>(cartKey);
 }

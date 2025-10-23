@@ -59,7 +59,7 @@
 }
 
 @utility interactive {
-	@apply cursor-pointer outline-2 outline-transparent transition-all focus-within:outline-2 focus-within:outline-primary focus-visible:outline-2 focus-visible:outline-primary enabled:hover:opacity-70 enabled:active:opacity-100 disabled:pointer-events-none disabled:opacity-40;
+	@apply cursor-pointer outline-2 outline-transparent transition-all focus-visible:outline-2 focus-visible:outline-primary enabled:hover:opacity-70 enabled:active:opacity-100 disabled:pointer-events-none disabled:opacity-40;
 }
 
 @utility interactive-overlay {
