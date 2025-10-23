@@ -1,34 +1,62 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-:root {
-	/* Sizes */
-	--radius: 1rem;
+@theme inline {
+	--font-sans: 'Inter', sans-serif;
 
-	/* Colors */
-	--background: oklch(1 0 0);
-	--foreground: oklch(0 0 0);
-	--card: oklch(97.529% 0.00751 260.892);
-	--card-foreground: oklch(21.188% 0.00966 17.805);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0 0 0);
-	--primary: oklch(52.545% 0.23963 261.992);
-	--primary-foreground: oklch(97.529% 0.00751 260.892);
-	--primary-muted: oklch(92.221% 0.03445 261.996);
-	--primary-muted-foreground: oklch(52.545% 0.23963 261.992);
-	--secondary: oklch(97.529% 0.00751 260.892);
-	--secondary-foreground: oklch(21.188% 0.00966 17.805);
-	--destructive: oklch(65.44% 0.23167 26.46);
-	--destructive-foreground: oklch(97.529% 0.00751 260.892);
-	--border: oklch(92.3% 0.01392 258.449);
-	--folder-primary: oklch(51.826% 0.16446 273.574);
-	--folder-primary-foreground: oklch(1 0 0);
-	--folder-secondary: oklch(53.511% 0.0975 49.903);
-	--folder-secondary-foreground: oklch(1 0 0);
-	--folder-warning: oklch(64.643% 0.12287 99.839);
-	--folder-warning-foreground: oklch(1 0 0);
-	--folder-success: oklch(51.334% 0.13266 145.19);
-	--folder-success-foreground: oklch(1 0 0);
-	--folder-destructive: oklch(55.165% 0.1841 25.608);
-	--folder-destructive-foreground: oklch(1 0 0);
+	--radius: 0.25rem;
+	--radius-lg: 0.5rem;
+	--radius-xl: 0.75rem;
+	--radius-2xl: 1rem;
+
+	--color-background: oklch(1 0 0);
+	--color-foreground: oklch(0 0 0);
+
+	--color-card: oklch(97.529% 0.00751 260.892);
+	--color-card-foreground: oklch(21.188% 0.00966 17.805);
+
+	--color-popover: oklch(1 0 0);
+	--color-popover-foreground: oklch(0 0 0);
+
+	--color-primary: oklch(52.545% 0.23963 261.992);
+	--color-primary-muted: oklch(92.221% 0.03445 261.996);
+	--color-primary-foreground: oklch(97.529% 0.00751 260.892);
+
+	--color-secondary: oklch(21.188% 0.00966 17.805);
+	--color-secondary-muted: oklch(97.529% 0.00751 260.892);
+	--color-secondary-foreground: oklch(97.529% 0.00751 260.892);
+
+	--color-destructive: oklch(65.44% 0.23167 26.46);
+	--color-destructive-muted: oklch(92.788% 0.0366 17.674);
+	--color-destructive-foreground: oklch(97.529% 0.00751 260.892);
+
+	--color-border: oklch(92.3% 0.01392 258.449);
+
+	--color-folder-primary: oklch(51.826% 0.16446 273.574);
+	--color-folder-primary-foreground: oklch(1 0 0);
+
+	--color-folder-secondary: oklch(53.511% 0.0975 49.903);
+	--color-folder-secondary-foreground: oklch(1 0 0);
+
+	--color-folder-warning: oklch(64.643% 0.12287 99.839);
+	--color-folder-warning-foreground: oklch(1 0 0);
+
+	--color-folder-success: oklch(51.334% 0.13266 145.19);
+	--color-folder-success-foreground: oklch(1 0 0);
+
+	--color-folder-destructive: oklch(55.165% 0.1841 25.608);
+	--color-folder-destructive-foreground: oklch(1 0 0);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+@utility interactive {
+	@apply cursor-pointer outline-2 outline-transparent transition-all focus-visible:outline-2 focus-visible:outline-primary enabled:hover:opacity-80 disabled:pointer-events-none disabled:opacity-40;
 }
