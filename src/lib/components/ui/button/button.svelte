@@ -36,7 +36,8 @@
 			{
 				color: 'default',
 				variant: 'ghost',
-				class: 'bg-transparent text-primary enabled:hover:bg-primary-muted'
+				class:
+					'bg-transparent text-primary enabled:hover:bg-primary-muted enabled:active:bg-primary-muted'
 			},
 			// Secondary color variants
 			{
@@ -52,7 +53,8 @@
 			{
 				color: 'secondary',
 				variant: 'ghost',
-				class: 'bg-transparent text-secondary enabled:hover:bg-secondary-muted'
+				class:
+					'bg-transparent text-secondary enabled:hover:bg-secondary-muted enabled:active:bg-secondary-muted'
 			},
 			// Destructive color variants
 			{
@@ -68,7 +70,8 @@
 			{
 				color: 'destructive',
 				variant: 'ghost',
-				class: 'bg-transparent text-destructive enabled:hover:bg-destructive-muted'
+				class:
+					'bg-transparent text-destructive enabled:hover:bg-destructive-muted enabled:active:bg-destructive-muted'
 			}
 		],
 		defaultVariants: {

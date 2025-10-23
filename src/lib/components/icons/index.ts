@@ -1,6 +1,7 @@
 export { default as AlignJustify } from './align-justify.svelte';
 export { default as ArrowLeft } from './arrow-left.svelte';
 export { default as ArrowRight } from './arrow-right.svelte';
+export { default as ArrowUp } from './arrow-up.svelte';
 export { default as CakeSlice } from './cake-slice.svelte';
 export { default as Sun } from './sun.svelte';
 export { default as Coffee } from './coffee.svelte';

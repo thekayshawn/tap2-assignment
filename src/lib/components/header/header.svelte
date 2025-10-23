@@ -1,7 +1,8 @@
 <script>
 	import logo from '$lib/assets/logo.svg';
-	import { Button, IconButton } from '../button';
+	import Button, { IconButton } from '../ui/button';
 	import { AlignJustify, ArrowLeft, Search, SlidersHorizontal } from '../icons';
+	import Responsive from '../ui/responsive.svelte';
 </script>
 
 <header class="grid px-6 pt-[62px] pb-3 md:grid-cols-[10rem_1fr_10rem] md:items-center md:p-3">
@@ -14,7 +15,7 @@
 		<img alt="Tap2" src={logo} class="h-7 w-auto" />
 	</div>
 	<!-- Trailing actions -->
-	<div class="flex items-center justify-between md:justify-end">
+	<div class="flex items-center justify-between gap-2 md:justify-end">
 		<div class="flex items-center gap-2">
 			<IconButton color="secondary" variant="muted" aria-label="Search inventory">
 				<Search />
@@ -24,9 +25,19 @@
 			</IconButton>
 		</div>
 		<div class="text-right">
-			<IconButton color="secondary" variant="ghost" aria-label="View cart">
-				<AlignJustify />
-			</IconButton>
+			<Responsive>
+				<IconButton color="secondary" variant="ghost" aria-label="View cart">
+					<AlignJustify />
+				</IconButton>
+				<!-- Different variant above md -->
+				{#snippet md()}
+					<IconButton color="secondary" variant="muted" aria-label="View cart">
+						<AlignJustify />
+					</IconButton>
+				{/snippet}
+				<!-- Hidden above lg -->
+				{#snippet lg()}{/snippet}
+			</Responsive>
 		</div>
 	</div>
 </header>
