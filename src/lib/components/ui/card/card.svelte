@@ -2,6 +2,7 @@
 	import type { Snippet } from 'svelte';
 	import { tv } from 'tailwind-variants';
 	import { cn, type UiComponentProps } from '$lib/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 
 	export const cardVariants = tv({
 		base: 'rounded-2xl flex p-3 [&_svg]:size-5 bg-card text-card-foreground relative isolate shrink-0 group z-0',
@@ -16,7 +17,7 @@
 		}
 	});
 
-	export type CardProps = UiComponentProps & {
+	export type CardProps = UiComponentProps<HTMLAttributes<HTMLDivElement>> & {
 		title: string;
 		description: string;
 		indicator?: Snippet<[{ class: string }]>;

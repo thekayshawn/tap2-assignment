@@ -31,6 +31,7 @@
 	--color-destructive-foreground: oklch(97.529% 0.00751 260.892);
 
 	--color-border: oklch(92.3% 0.01392 258.449);
+	--color-neutral: oklch(0% 0 0 / 0.502);
 
 	--color-folder-primary: oklch(51.826% 0.16446 273.574);
 	--color-folder-primary-foreground: oklch(1 0 0);

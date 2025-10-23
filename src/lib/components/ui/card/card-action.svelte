@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { cn, type UiComponentProps } from '$lib/utils';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
 
 	let {
 		as = 'button',
@@ -7,7 +8,7 @@
 		class: className,
 		children,
 		...props
-	}: UiComponentProps<HTMLButtonElement> = $props();
+	}: UiComponentProps<HTMLButtonAttributes> = $props();
 </script>
 
 <svelte:element

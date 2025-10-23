@@ -3,6 +3,7 @@
 	import { tv } from 'tailwind-variants';
 	import { buttonVariants } from './button.svelte';
 	import { cn, type UiComponentProps } from '$lib/utils';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
 
 	export const iconButtonVariants = tv({
 		extend: buttonVariants,
@@ -21,7 +22,7 @@
 
 	export type IconButtonVariants = VariantProps<typeof iconButtonVariants>;
 
-	export type IconButtonProps = IconButtonVariants & UiComponentProps<HTMLButtonElement>;
+	export type IconButtonProps = IconButtonVariants & UiComponentProps<HTMLButtonAttributes>;
 </script>
 
 <script lang="ts">

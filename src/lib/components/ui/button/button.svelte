@@ -1,5 +1,6 @@
 <script lang="ts" module>
 	import { cn, type UiComponentProps } from '$lib/utils';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import type { VariantProps } from 'tailwind-variants';
 	import { tv } from 'tailwind-variants';
 
@@ -83,7 +84,7 @@
 
 	export type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-	export type ButtonProps = ButtonVariants & UiComponentProps<HTMLButtonElement>;
+	export type ButtonProps = ButtonVariants & UiComponentProps<HTMLButtonAttributes>;
 </script>
 
 <script lang="ts">
